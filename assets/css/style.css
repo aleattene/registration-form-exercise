@@ -1,1 +1,136 @@
+/* Definizione STILE di formattazione del contenuto identificato dal tag html <h1> ... </h1> */
+h1 {
+  color: whitesmoke; /* colore carattere */
+  font-size: 36px; /* dimensione carattere */
+  font-weight: normal; /* consistenza visiva del carattere */
+}
 
+/* Definizione STILE di formattazione del contenuto identificato dal tag html <h2> ... </h2> */
+h2 {
+  color: whitesmoke;
+  font-size: 24px;
+  font-weight: normal;
+}
+
+/* Definizione STILE di formattazione del contenuto identificato dal tag html <h3> ... </h3> */
+h3 {
+  color: rgb(0, 121, 121);
+  font-size: 21px;
+  font-family: Arial, Helvetica, sans-serif; /* tipo di font da utilizzare */
+  margin-bottom: 12px; /* dimensione del margine inferiore */
+}
+
+/* Definizione STILE di formattazione del contenuto identificato dall'attributo class = "signature" */
+.signature {
+  color: whitesmoke;
+  font-size: 20px;
+}
+
+/* Definizione STILE di formattazione del contenuto identificato dall'attributo class = "footer" */
+.footer {
+  color: rgba(245, 245, 245, 0.856);
+  font-size: 16px;
+  margin-top: 32px; /* dimensione del margine superiore */
+}
+
+/* Definizione STILE di formattazione del contenuto identificato dal tag html <body> ... </body> */
+body {
+  background-color: darkcyan;
+  margin-top: 30px;
+  text-align: center; /* allineamento al centro del testo */
+}
+
+/* Definizione STILE di formattazione del contenuto identificato dall'attributo id = "boxform" */
+#boxform {
+  width: 430px; /* dimensione larghezza */
+  background-color: whitesmoke;
+  margin: 30px auto 10px auto;
+  padding: 5px; /* dimensione del padding */
+  border-radius: 10px; /* dimensione bordi arrotondati */
+}
+
+/* Definizione STILE di formattazione del contenuto identificato dal tag html <form> ... </form> */
+form {
+  padding-left: 10px; /* dimensione padding sinistro */
+  padding-right: 10px; /* dimensione padding destro */
+  padding-bottom: 12px; /* dimensione padding inferiore */
+  margin: 5px;
+  border: 5px double darkcyan; /* dimensione, consistenza e colore del bordo */
+  border-radius: 10px;
+}
+
+/* Definizione STILE di formattazione del contenuto identificato dal tag html <input ... /> */
+input {
+  background-color: white;
+  color: black;
+  height: 26px; /* dimensione altezza */
+  width: 80%;
+  margin: 12px;
+  border-radius: 5px;
+  padding-left: 12px;
+  border: 2px inset rgba(224, 224, 224, 0.582);
+}
+
+/* Definizione STILE di formattazione del contenuto identificato dal tag html <select> ... </select> */
+select {
+  height: 32px;
+  width: 84%;
+  border-radius: 5px;
+  margin: 12px;
+  padding-left: 10px;
+  border: 2px inset rgba(224, 224, 224, 0.582);
+}
+
+/* Definizione Stile specifico di formattazione, per la simulazione dell'attributo PLACEHOLDER 
+    relativamente al CAMPO SELECT */
+select:required:invalid {
+  color: grey;
+}
+
+/* Definizione Stile specifico per "NON visualizzare" nell'elenco delle OPZIONI (20 Regioni Italiane) del CAMPO
+    SELECT, anche l'opzione iniziale, poichè utilizzata solo allo scopo di simulare l'attributo placeholder */
+option[value=""][disabled] {
+  display: none;
+}
+
+/* Definizione Stile per l'elenco delle OPZIONI (20 Regioni Italiane) identificate dal tag <option>...></option>,
+    relativamente all'elenco visualizzabile dall'utente nel CAMPO SELECT */
+option {
+  color: black;
+}
+
+/* Definizione STILE di formattazione specifico, per il contenuto identificato dai 
+    CAMPI di "INPUT" e di "SELEZIONE", qualora l'utente si "posizioni" su di essi */
+input:focus,
+select:focus {
+  border-color: darkcyan;
+  border-width: 2px;
+  background-color: cornsilk;
+}
+
+/* Definizione STILE di formattazione specifico, per il contenuto identificato dal CAMPO "INPUT" di tipo "DATE",
+    anche qualora l'utente si "posizioni" su di esso per l'inserimento della Data di Nascita */
+input[type="date"],
+input[type="date"]:focus {
+  height: 28px;
+}
+
+/* Ridefinizione dello Stile Precedente, "personalizzandolo" per il Browser Mozilla Firefox */
+@-moz-document url-prefix() {
+  input[type="date"],
+  input[type="date"]:focus {
+    height: 26px;
+  }
+}
+
+/* Definizione Stile di formattazione grafica relativamente ai due BOTTONI di "INVIO" e di "ANNULLA"
+    (anche relativamente alla forma del puntatore del MOUSE) */
+button {
+  width: 39%;
+  height: 36px;
+  margin: 18px 12px 12px 12px;
+  border-radius: 8px;
+  background-color: darkcyan;
+  color: whitesmoke;
+  cursor: pointer; /* forma puntatore del mouse */
+}
